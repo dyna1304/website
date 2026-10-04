@@ -1,25 +1,261 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+body{
+    background-color:white;
+    color:black;
+    font-family:Arial, sans-serif;
+}
+
+a{
+    text-decoration:none;
+    color: black;
+}
+.navbar{
+    background-color: white;
+    border-bottom: 1px solid white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding: 20px 7.5%;
+}
+
+.navbar h2{
+    color:blue;
+    font-size: 24px;
+}
 .navbar ul{
-    list-style:none;
-    background-color: darkgrey;
-    padding :0px;
-    margin: 0px;
-    overflow:hidden;
+    display:flex;
+    gap: 30px;
+    list-style: none;
 }
 .navbar a{
-    color:black;
-    text-decoration:none;
-    padding: 15px;
-    display: block;
-    text-align: center;
+    color: grey;
+    font-size: 15px;
 }
 .navbar a:hover{
-    background-color:white ;
+    color:blue;
 }
-.navbar li{
-    float:left;
+#Home{
+    width: 85%;
+    max-width:1100px;
+    min-height:550px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
 }
-@media screen and (max-widt:600px){
-    aside,section,article{
-        width:100%;
+.home-text{
+    width: 55%;
+}
+.home-text h1{
+    font-size: 58px;
+    margin-bottom: 15px;
+}
+.home-text h1 span{
+    color:blue;
+}
+.home-text h2{
+    font-size: 28px;
+    font-weight:normal;
+    color:black;
+    margin-bottom: 20px;
+}
+.home-text p{
+    width: 550px;
+    color: grey;
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+.button{
+    display:inline-block;
+    background-color: blue;
+    color: white;
+    padding: 13px 25px;
+    border-radius: 6px;
+    font-size: 16px;
+}
+.button:hover{
+    background-color: blue;
+}
+.home-image{
+    width: 38%;
+    height: 430px;
+}
+.home-image img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    object-position:center top;
+    border-radius: 1000px;
+}
+#About,
+#Project,
+#Contact{
+    width: 85%;
+    max-width: 1100px;
+    margin:auto;
+    padding: 80px 0;
+    border-top: 1px solid white;
+}
+#About h2,
+#Project h2,
+#Contact h2{
+    font-size: 38px;
+    margin-bottom: 30px;
+    color: black;
+}
+#About p{
+    width: 700px;
+    color: #6b7280;
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 18px;
+}
+table{
+    width: 700px;
+    margin-top: 35px;
+    border-collapse:collapse;
+    background-color: white;
+}
+th{
+    background-color: #2563eb;
+    color: white;
+    padding: 15px;
+    text-align: left;
+}
+td{
+    padding: 15px;
+    color: #4b5563;
+}
+.project{
+    background-color: white;
+    border: 1px solid white;
+    border-radius: 12px;
+    padding: 25px;
+    margin-bottom: 30px;
+    display:flex;
+    gap: 35px;
+    align-items:center;
+}
+.project-image{
+    width: 42%;
+    height: 230px;
+}
+.project-image img{
+    width: 100%;
+    height: 100%;
+    object-fit:cover;
+    border-radius: 8px;
+}
+.project-text{
+    width: 55%;
+}
+.project-text h3{
+    font-size: 26px;
+    margin-bottom: 15px;
+    color: #111827;
+}
+.project-text p{
+    color: #6b7280;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.portfolio-box{
+    width: 42%;
+    height: 230px;
+    background-color: white;
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    border-radius: 8px;
+}
+.portfolio-box h3{
+    color: #2563eb;
+    font-size: 30px;
+    margin-bottom: 10px;
+}
+.portfolio-box p{
+    color: #6b7280;
+    font-size: 17px;
+}
+#Contact p{
+    color: #6b7280;
+    font-size: 17px;
+    margin-bottom: 20px;
+}
+#Contact a{
+    color: #2563eb;
+    font-size: 18px;
+    line-height: 2;
+}
+#Contact a:hover{
+    color: #1d4ed8;
+}
+footer{
+    background-color: white;
+    border-top: 1px solid white;
+    padding: 25px 7.5%;
+    display:flex;
+    justify-content:space-between;
+    color: #9ca3af;
+    font-size: 14px;
+}
+@media (max-width: 700px){
+    .navbar{
+        flex-direction:column;
+        gap: 20px;
+    }
+    .navbar ul{
+        gap: 18px;
+    }
+    #Home{
+        flex-direction:column;
+        padding: 60px 0;
+    }
+    .home-text{
+        width: 100%;
+    }
+    .home-text h1{
+        font-size: 42px;
+    }
+    .home-text h2{
+        font-size: 23px;
+    }
+    .home-text p{
+        width: 100%;
+    }
+    .home-image{
+        width: 100%;
+        height: 400px;
+        margin-top: 45px;
+    }
+    #About p{
+        width: 100%;
+    }
+    table{
+        width: 100%;
+    }
+    .project{
+        flex-direction:column;
+    }
+    .project-image{
+        width: 100%;
+    }
+    .project-text{
+        width: 100%;
+    }
+    .portfolio-box{
+        width: 100%;
+    }
+    footer{
+        flex-direction:column;
+        gap: 10px;
     }
 }
